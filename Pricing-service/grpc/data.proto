@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package protobuf;
+option go_package = "github.com/aviscode/Coins/Pricing-service/grpc";
+
+
+service Service {
+  rpc GetPrice (GetCoinPrice) returns (Response) {}
+}
+
+
+message GetCoinPrice {
+  string symbol = 1;
+}
+
+message Response {
+  double price = 1;
+}
+
