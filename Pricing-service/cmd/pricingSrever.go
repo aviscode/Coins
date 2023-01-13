@@ -17,7 +17,7 @@ var (
 )
 
 func initFlags() {
-	flag.StringVar(&ApiKey, "ApiKey", "08b53f4d-0a5d-452e-b67f-3af8af0d035c", "The api-key for coinmarketcap services ")
+	flag.StringVar(&ApiKey, "ApiKey", "", "The api-key for coinmarketcap services ")
 	flag.StringVar(&ServerAddr, "ServerAddr", ":9091", "The the address  the service is listening on ")
 	flag.Parse()
 }
